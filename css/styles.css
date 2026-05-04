@@ -250,7 +250,7 @@ img {
   text-align: center;
   color: #ffffff;
   padding-bottom: 72px;
-  max-width: 496px;
+  max-width: 216px;
   margin: 0 auto;
 }
 
@@ -306,12 +306,12 @@ button {
 }
 
 .features-list-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
   color: #2e2f42;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .features-list-text {
@@ -359,8 +359,11 @@ button {
   max-width: 411px;
   margin: 0 auto;
   margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
 }
-
 .team-list-item {
   background-color: #ffffff;
   box-shadow:
@@ -454,17 +457,12 @@ button {
 }
 
 .portfolio-item {
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-item:hover {
   box-shadow:
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
+
 
 .portfolio-item-wrapper {
   border: 1px solid #e7e9fc;
@@ -1142,6 +1140,12 @@ background-color: #404bbf;
     padding-left: 16px;
   }
 
+  .mob-menu {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1-tab.jpg);
   }
@@ -1152,17 +1156,23 @@ background-color: #404bbf;
     }
   }
 
-  .features {
+  .features .container {
     padding-block: 96px;
   }
   .features-list {
     gap: 24px;
   }
+
+.features-list-title {
+  text-align: left;
+}
+
+
   .features-list-item {
     width: calc((100% - 24px) / 2);
   }
 
-  .team {
+  .team .container {
     padding-block: 96px;
     padding-right: 108px;
     padding-left: 108px;
@@ -1198,6 +1208,7 @@ background-color: #404bbf;
     font-size: 56px;
     line-height: 107%;
     padding-bottom: 36px;
+    max-width: 496px;
   }
 
 
@@ -1215,7 +1226,7 @@ background-color: #404bbf;
   width:360px;
 }
 
-.footer {
+.footer .container {
   padding: 96px 80px 96px 80px;
 }
 
@@ -1271,10 +1282,16 @@ background-color: #404bbf;
 
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1440px;
+    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
+  }
+
+  .mob-menu {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .hero {
@@ -1287,14 +1304,21 @@ background-color: #404bbf;
     }
   }
 
-  .features {
+  .features .container {
    padding-block: 120px;
   }
 
   .features-list {
     gap: 24px;
-    
    }
+
+   .features-list-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+   }
+
   .features-list-item {
     width: calc((100% - 24px * 3) / 4);
   }
@@ -1310,7 +1334,7 @@ background-color: #404bbf;
     border-radius: 4px;
 
 }
-.team {
+.team .container {
     padding-block: 120px;
 }
 .team-list {
@@ -1320,7 +1344,7 @@ background-color: #404bbf;
     width: calc((100% - 24px * 3) / 4);
 }
 
-.portfolio{
+.portfolio .container {
     padding-block: 105px;
 }
 .portfolio-item{
@@ -1330,19 +1354,33 @@ background-color: #404bbf;
 .portfolio .overlay-content img {
     width: 360px;
     height: 300px;
+}
 
 .hero-wrapper {
   padding-block: 188px; 
 }
+
+.portfolio-item {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
 .hero-title {
   font-size: 56px;
   line-height: 1.07; 
   padding-bottom: 48px;
+  max-width: 496px;
 }
 .hero-button {
   min-width: 169px;
-}
-
 }
 
 .modal {
@@ -1359,7 +1397,7 @@ background-color: #404bbf;
   height: 40px;
 }
 
-.footer {
+.footer .container {
 padding-block: 100px;}
 
 .footer-wrapper {
@@ -1395,6 +1433,5 @@ height: 80px;
  .footer-form-button {
  margin-left: 24px;
  }
-
 }
 
