@@ -311,7 +311,7 @@ button {
 }
 
 .features-list-text {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -983,6 +983,10 @@ button {
   height: 100%;
   background-color: #ffffff;
   padding: 24px 24px 40px 16px;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-bottom: 9px;
+  margin-left: 16px;
 
   opacity: 0;
   visibility: hidden;
@@ -1136,6 +1140,7 @@ button {
 
   .contacts {
     display: flex;
+    flex-direction: column;
   }
 
   .contact-list {
@@ -1147,7 +1152,7 @@ button {
 
   .address-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 12px;
   }
 
@@ -1165,9 +1170,11 @@ button {
     }
   }
 
-  .features .container {
-    /* padding-block: 96px; */
+  .features {
+   padding-top: 96px;
+   padding-bottom: 96px;
   }
+
   .features-list {
     gap: 24px;
     row-gap: 72px;
@@ -1181,14 +1188,10 @@ button {
     width: calc((100% - 24px) / 2);
   }
 
-  .features-list-text {
-    font-weight: 500;
-  }
-
-  .team .container {
-    padding-block: 96px;
-    padding-right: 108px;
-    padding-left: 108px;
+  .team {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  
   }
   .team-list {
     gap: 64px 24px;
@@ -1316,7 +1319,14 @@ button {
 
   .contacts {
     display: flex;
+    flex-direction: row;
     margin-left: auto;
+  }
+
+  .address-list {
+     display: flex;
+    flex-direction: row;
+    gap: 40px;
   }
 
   .contact-list {
@@ -1340,8 +1350,9 @@ button {
     }
   }
 
-  .features .container {
-    /* padding-block: 120px; */
+  .features {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .features-list {
@@ -1358,6 +1369,11 @@ button {
   .features-list-item {
     width: calc((100% - 24px * 3) / 4);
   }
+
+.features-list-text {
+  font-weight: 400;
+}
+
   .feature-icons {
     display: flex;
     justify-content: center;
@@ -1369,8 +1385,9 @@ button {
     border: 1px solid #8e8f99;
     border-radius: 4px;
   }
-  .team .container {
-    padding-block: 120px;
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   .team-list {
     gap: 24px;
@@ -1379,8 +1396,9 @@ button {
     width: calc((100% - 24px * 3) / 4);
   }
 
-  .portfolio .container {
-    padding-block: 105px;
+  .portfolio {
+    padding-top: 105px;
+    padding-bottom: 105px;
   }
   .portfolio-item {
     width: calc((100% - 24px * 2) / 3);
