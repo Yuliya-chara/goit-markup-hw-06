@@ -109,7 +109,7 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
-  padding: 16px;
+  /* padding: 16px; */
   box-shadow:
     0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
@@ -288,7 +288,8 @@ button {
 /*features*/
 
 .features {
-  padding: 96px 16px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .features-list {
@@ -331,7 +332,8 @@ button {
 
 .team {
   background-color: #f4f4fd;
-  padding: 96px 28px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .team-list {
@@ -439,7 +441,8 @@ button {
 /*portfolio*/
 
 .portfolio {
-   padding: 96px 16px;
+   padding-top: 96px;
+   padding-bottom: 96px;
 }
 .portfolio-header {
   margin: 0 auto;
@@ -526,7 +529,8 @@ button {
 
 .footer {
   background-color: #2e2f42;
-  padding: 96px 16px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   
   
 }
@@ -1002,9 +1006,9 @@ button {
   background-color: #FFFFFF;
   padding: 24px 24px 40px 16px;
 
-  opacity: 0;
+  /* opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none; */
 }
 .mob-menu-closure {
   display: flex;
@@ -1070,10 +1074,14 @@ color: #2e2f42;
 }
 
 .mob-contacts {
- display: flex;
  margin-top: auto;
- gap: 24px;
  margin-bottom: 48px;
+}
+
+.mob-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
   
 .mob-contact-email {
@@ -1081,7 +1089,7 @@ color: #2e2f42;
 font-size: 20px;
 line-height: 120%;
 letter-spacing: 0.02em;
-color: #4d5ae5;
+color: #434455;
 }
 
 .mob-contact-tel {
@@ -1089,7 +1097,7 @@ color: #4d5ae5;
 font-size: 20px;
 line-height: 120%;
 letter-spacing: 0.02em;
-color: #434455;
+color: #4d5ae5;
 }
 
 .mob-social {
@@ -1158,6 +1166,13 @@ display: flex
     display: flex;
   }
 
+  .contact-list {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  }
+
   .address-list {
     display: flex;
     flex-wrap: wrap;
@@ -1191,6 +1206,10 @@ display: flex
     width: calc((100% - 24px) / 2);
   }
 
+  .features-list-text {
+    font-weight: 500;
+  }
+
   .team .container {
     padding-block: 96px;
     padding-right: 108px;
@@ -1221,7 +1240,8 @@ display: flex
   }
 
   .hero-wrapper {
-    padding: 136px 112px;
+    padding-top: 112px;
+    padding-bottom: 112px;
   }
   .hero-title {
     font-size: 56px;
@@ -1254,6 +1274,7 @@ display: flex
   flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
+  row-gap: 72px;
   
 }
 
@@ -1285,6 +1306,9 @@ display: flex
   flex-direction: row;
   justify-content: flex-start;
   align-items: baseline;
+}
+.footer-form-input {
+  width: 264px;
 }
 
 .footer-form-button {
@@ -1326,6 +1350,12 @@ margin-left: 76px;
   display: flex;
   margin-left: auto;
 }
+
+.contact-list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpg);
