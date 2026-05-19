@@ -1130,12 +1130,14 @@ button {
     display: none;
   }
 
-  .header-wrapper {
-    gap: 120px;
-  }
+
 .header-wrapper {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.header-logo {
+  margin-right: 120px;
 }
 
   .header-nav {
@@ -1145,6 +1147,7 @@ button {
   .contacts {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
   }
 
   .contact-list {
@@ -1199,9 +1202,12 @@ button {
   }
   .team-list {
     gap: 64px 24px;
+    justify-content: center;
   }
+
   .team-list-item {
     width: calc((100% - 24px) / 2);
+    max-width: 264px;
   }
 
   .portfolio {
@@ -1312,13 +1318,14 @@ button {
   .mob-menu-open {
     display: none;
   }
-  .header-wrapper {
-    gap: 0;
+  
+  .header-logo {
+    margin-right: 76px;
   }
 
   .header-nav {
     display: flex;
-    margin-left: 76px;
+    margin-right: 332px;
   }
 
   .contacts {
@@ -1452,7 +1459,6 @@ button {
   }
   .modal-input-comment {
     width: 360px;
-    height: 40px;
   }
 
   .footer .container {
