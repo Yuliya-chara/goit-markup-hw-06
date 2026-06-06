@@ -1,0 +1,309 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-open,
+.mob-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 288px;
+  max-height: 623px;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  padding: 24px 16px;
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button-closure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 100%;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc;
+  border: 1px solid #0000001a;
+
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-closure-icon {
+  fill: #2e2f42;
+
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-closure:hover,
+.button-closure:focus {
+  background-color: #404bbf;
+  fill: #fff;
+}
+
+.button-closure-icon:hover,
+.button-closure-icon:focus {
+  background-color: #404bbf;
+  fill: #fff;
+}
+
+.modal-title {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-align: center;
+  max-width: 360px;
+  margin-bottom: 16px;
+  margin-top: 48px;
+}
+
+.modal-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 256px;
+  height: 40px;
+  padding-left: 38px;
+
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  outline: transparent;
+  border-color: #4d5ae5;
+}
+
+.modal-input:focus + .modal-field-icon {
+  fill: #4d5ae5;
+}
+
+.modal-input-comment {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 256px;
+  height: 120px;
+  padding-left: 16px;
+
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input-comment::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-field-wrapper {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.modal-field-icon {
+  stroke: 1;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-input-comment:focus {
+  outline: transparent;
+  border-color: #4d5ae5;
+}
+
+.modal-input-comment:focus + .modal-field-icon {
+  fill: #4d5ae5;
+}
+
+.modal-textarea {
+  height: 120px;
+  resize: none;
+  padding: 8px 16px;
+}
+
+.modal-checkbox-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: flex;
+  align-items: center;
+}
+
+.modal-checkbox-label a {
+  line-height: 133%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.modal-checkbox {
+  border: 1px solid;
+  transition-property: fill, border-color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-mark {
+  fill: transparent;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  width: 16px;
+  height: 16px;
+
+  transition-property: fill, border-color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox:checked + .modal-checkbox-label .check-mark {
+  fill: #f4f4fd;
+  border-color: #404bbf;
+  background-color: #404bbf;
+}
+
+.modal-checkbox:focus + .modal-checkbox-label .check-mark {
+  border-color: #404bbf;
+}
+
+.icon-checkbox {
+  fill: transparent;
+  transition-property: fill, border-color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox:checked + .modal-checkbox-label .icon-checkbox {
+  fill: #f4f4fd;
+  border-color: #404bbf;
+  background-color: #404bbf;
+}
+
+.modal-checkbox:focus + .modal-checkbox-label .icon-checkbox {
+  border-color: #404bbf;
+}
+
+.modal-field-comment .modal-textarea {
+  margin-bottom: 16px;
+}
+
+.modal-checkbox-label {
+  margin-bottom: 24px;
+}
+
+.submit-button {
+  border-radius: 4px;
+  padding-block: 16px;
+  padding-inline: 32px;
+  width: 169px;
+  height: 56px;
+  background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  color: #fff;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-button:active,
+.submit-button:focus,
+.submit-button:hover {
+  background-color: #404bbf;
+}
+
+.submit-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 408px;
+    max-height: 584px;
+    padding: 24px;
+  }
+
+  .modal-input {
+    width: 360px;
+  }
+
+  .modal-input-comment {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .modal {
+    max-width: 408px;
+    min-height: 584px;
+    padding: 24px;
+  }
+
+  .modal-input {
+    width: 360px;
+  }
+  .modal-input-comment {
+    width: 360px;
+  }
+}
