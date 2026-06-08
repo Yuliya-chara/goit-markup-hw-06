@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header-wrapper">
           <a class="header-logo" href="./index.html"
@@ -59,7 +59,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="hero" >
         <div class="container">
           <div class="hero-wrapper">
             <h1 class="hero-title">Effective Solutions for Your Business</h1>
@@ -71,9 +71,9 @@
         </div>
       </section>
 
-      <section class="features">
+      <section class="features" id="features">
         <div class="container">
-          <h2 class="visually-hidden">Our Features</h2>
+          <h2 class="sr-only">Our Features</h2>
           <ul class="features-list">
             <li class="features-list-item">
               <div class="feature-icons">
@@ -130,7 +130,7 @@
         </div>
       </section>
 
-      <section class="team">
+      <section class="team" id="team">
         <div class="container">
           <h2 class="section-header team-title">Our Team</h2>
           <ul class="team-list">
@@ -547,7 +547,7 @@
     </main>
 
     <footer class="footer">
-            <div class="container">
+            <div class="container" id="footer">
                 <div class="footer-wrapper">
 
                   <div class="footer-logo-wrapper">
@@ -661,7 +661,7 @@
        
         </footer>
 
-    <div class="backdrop">
+    <div class="backdrop" id="modal">
       <div class="modal">
         <button type="button" class="button-closure">
           <svg class="button-closure-icon" width="8" height="8">
@@ -732,7 +732,7 @@
               type="checkbox"
               id="privacy-policy"
               name="privacy-policy"
-              class="modal-checkbox visually-hidden"
+              class="modal-checkbox sr-only"
             >
             <label for="privacy-policy" class="modal-checkbox-label">
               <span class="check-mark">
@@ -753,7 +753,7 @@
 
     
 
-    <div class="mob-menu">
+    <div class="mob-menu" id="mobile-menu">
       <button class="mob-menu-closure" type="button">
         <svg class="mob-button-closure-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-close-button"></use>
